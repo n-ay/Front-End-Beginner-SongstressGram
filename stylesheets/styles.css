@@ -1,0 +1,154 @@
+@font-face {
+  font-family: 'lakeshore';
+  src: url('./fonts/JuliusSansOne-Regular.ttf');
+}
+@font-face {
+  font-family: 'poptext';
+  src: url('./fonts/Lobster-Regular.ttf');
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  background: rgb(92, 6, 92);
+}
+
+.thumbnail-title {
+  display: block;
+  margin: 0;
+  padding: 4px 10px;
+  background: rgb(92, 54, 92);
+  color: rgb(225, 160, 225);
+  font-size: 18px;
+}
+
+a[href="#"] {
+  text-decoration: none;
+}
+
+.main-header {
+  flex: 0 1 auto;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-image-container {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-image-frame {
+  position: relative;
+  text-align: center;
+
+  transition: transform 333ms;
+}
+
+.is-tiny{
+  transform: scale(0.001);
+  transition: transform 0ms;
+}
+.detail-image {
+  width: 90%;
+}
+
+.detail-image-title{
+  font-family: poptext;
+  position: absolute;
+  bottom: -12px;
+  left: 2px;
+  color: rgba(255, 245, 250,0.8);
+  text-shadow: rgba(250, 173, 43, 0.5) 1px 2px 5px;
+  font-size: 30px;
+}
+.thumbnail-list {
+  flex: 0 1 auto;
+  order: 2;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 20px 0;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.thumbnail-image {
+  display: block;
+  width: 100%;
+}
+
+.thumbnail-item {
+  display: inline-block;
+  min-width: 120px;
+  max-width: 120px;
+  border: 1px solid rgb(100%, 100%, 100%);
+  border: 1px solid rgba(100%, 100%, 100%, 0.8);
+
+  transition: transform 133ms ease-in-out;
+}
+.thumbnail-item:hover {
+  transform: scale(1.2);
+}
+
+.hidden-detail .detial-image-container{
+  display: none;
+}
+
+.hidden-detail .thumbnail-list{
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden-detail .thumnail-item{
+  max-width: 80%;
+}
+
+@media all and (min-width: 768px) {
+  .main-content{
+    flex-direction: row;
+    overflow: hidden;
+  }
+ .thumbnail-list{
+   flex-direction: column;
+   order: 0;
+   margin-left: 20px;
+
+   padding: 0 35px;
+ }
+ .thumbnail-item{
+   max-width: 260px;
+ }
+ .thumbnail-item + .thumbnail-item{
+   margin-top: 20px;
+ }
+}
+
+
+
+
+
+.logo-text {
+  background: rgb(225, 160, 225);
+  color: rgb(115, 42, 115);
+  text-align: center;
+  text-transform: full-width;
+  font-family: lakeshore;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 37px;
+}
+
+/*  font-style: oblique;
+  text-decoration-color: hotpink;
+  position: relative;
+*/
