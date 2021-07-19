@@ -4,4 +4,4 @@ A simple responsive Web-page using HTML and CSS.
 
 Preview:
 
-![Preview Image](https://oct.github.com/images/yaktocat.png)
+![Preview Image](https://github.com/n-ay/Front-End-Beginner-SongstressGram/blob/main/Preview-image.png)
